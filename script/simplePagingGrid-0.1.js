@@ -5,6 +5,7 @@
 
     $.fn.simplePagingGrid = function (options) {
         var templates = $.extend({
+            // html 模板
             buttonBarTemplate: '<div><button class="btn">&laquo; Prev</button><button class="btn pull-right">Next &raquo</button></div><div class="clearfix"></div>',
             tableTemplate: '<table><thead></thead><tbody></tbody></table>',
             headerTemplate: '<th width="{{width}}">{{title}}</th>',
@@ -12,6 +13,7 @@
         }, options.templates);
         
         var settings = $.extend({
+            //默认设置
             pageSize: 10,
             columnWidths: [],
             cellTemplates: null,
@@ -130,7 +132,7 @@
             thead = table.find("thead");
             headerRow = $("<tr>").appendTo(thead);
             tbody = table.find("tbody");
-
+            //标题行
             $.each(settings.columnNames, function (index, columnName) {
                 var sortEnabled = settings.sortable[index];
                 var sortAscending;
