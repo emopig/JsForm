@@ -21,7 +21,7 @@ public class JsonServer : System.Web.Services.WebService
     }
 
     [WebMethod]
-    public string GetJsonObjByName()
+    public string GetBlockJson(int frmId,int blkId)
     {
         return "{}";
     }

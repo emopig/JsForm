@@ -1,6 +1,7 @@
 ﻿{
   "queryName": "employee",
   "type": "view",
+  "toolbar": false,
   "rowHeight": 15,
   "displayRows": 20,
   "columnNames": [ "employee_id", "first_name", "last_name", "email","hire_date"],
@@ -8,6 +9,5 @@
   "columnTitles": [ "工号","名","姓","邮箱","入职日期"],
   "columnDataTypes": ["Varchar2","varchar2","Varchar2","Varchar2","Datetime"],
   "sortable": [ 1,1,1,1,1],
-  "dataSql": "select t.employee_id,t.first_name,t.last_name,t.email,t.phone_number,t.hire_date from HR.EMPLOYEES t",
   "data": { }
 }

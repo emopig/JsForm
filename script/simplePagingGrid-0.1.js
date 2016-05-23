@@ -101,6 +101,11 @@
                 }
             }
 
+            function getData() {
+                data = get 
+            }
+
+
             function loadData() {
                 tbody.empty();
                 $.each(pageData, function (rowIndex, rowData) {
