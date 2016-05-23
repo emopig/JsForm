@@ -1,0 +1,17 @@
+﻿{
+  "blkId": 1,
+  "frmId": 1,
+  "blkName": "employee",
+  "blkTitle": "查询员工信息",
+  "type": "readOnly",
+  "toolbar": false,
+  "rowHeight": 15,
+  "displayRows": 20,
+  "columnNames": [ "employee_id", "first_name", "last_name", "email", "hire_date"],
+  "columnWidths": [ 10, 30, 30, 50, 20 ],
+  "columnTitles": [ "工号", "名", "姓", "邮箱", "入职日期" ],
+  "columnDataTypes": [ "Varchar2", "varchar2", "Varchar2", "Varchar2", "Datetime" ],
+  "sortable": [ 1, 1, 1, 1, 1 ],
+  "sql": "select t.employee_id,t.first_name,t.last_name,t.email,t.phone_number,t.hire_date from HR.EMPLOYEES t",
+  "data": [ ]
+}

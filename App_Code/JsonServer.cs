@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -23,7 +25,14 @@ public class JsonServer : System.Web.Services.WebService
     [WebMethod]
     public string GetBlockJson(int frmId,int blkId)
     {
-        return "{}";
+        string jsonText = "[{'a':'aaa','b':'bbb','c':'ccc'},{'a':'aaa2','b':'bbb2','c':'ccc2'}]";
+        JArray jArray = (JArray)JsonConvert.DeserializeObject(jsonText);
+        JObject jObject = (JObject)jArray[1];
+        string sql = (string)jObject["sql"];
+
+        Database db = new Database();
+        OracleDataReader reader = db.returnSqlReader(sql);
+        return reader.convert2json;
     }
 
 }
